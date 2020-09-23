@@ -18,6 +18,7 @@ body {
 
 .title {
     margin-top: 50px;
+    margin-bottom: 40px;
     font-size: 30px;
 }
 
@@ -33,14 +34,19 @@ body {
     position: relative;
     display: table-cell;
     height: 100%;
+    align-items: center;
 
     border-left: 1px solid black;
 }
 
+.menuCell:first-child {
+    border-left: none;
+}
+
 .menuItem {
-    display: block;
-    margin: 0 auto;
+    display: inline;
     position: relative;
+    padding-bottom: 2px;
 
     color: black;
     text-decoration: none;
@@ -48,13 +54,10 @@ body {
     font-size: 20px;
 }
 
-.menuItem:first-child {
-    border-left: none;
-}
-
 .menuItem:hover {
     transition: color .1s linear;
-    color: rgb(161, 161, 161);
+    color: rgb(56, 56, 56);
+    cursor: pointer;
 }
 
 .menuItem:before {
@@ -76,4 +79,15 @@ body {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
+    background-color: rgb(56, 56, 56);
+}
+
+
+.noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
 }
