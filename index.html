@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="assets/styles/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     </head>
     <body>
@@ -14,21 +15,24 @@
         <div class="elementContainer">
             <div class="menuBar">
                 <div class="menuCell">
-                    <div class="menuItem noselect">
+                    <div class="menuItem noselect" id="about_button">
                         About Me
                     </div>
                 </div>
                 <div class="menuCell">
-                    <div class="menuItem noselect">
+                    <div class="menuItem noselect" id="proj_button">
                         Projects
                     </div>
                 </div>
                 <div class="menuCell">
-                    <div class="menuItem noselect">
+                    <div class="menuItem noselect" id="other_button">
                         Other Interests
                     </div>
                 </div>
             </div>
         </div>
+        <div class="textContainer" id="main"></div>
+
+        <script src="nav.js"></script>
     </body>
 </html>
