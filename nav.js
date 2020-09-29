@@ -138,6 +138,36 @@ function gen_proj() {
         <div class="project_title">Dynamic Memory Allocater v. 1</div>\
         <div class="project_desc">desc</div>\
     </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Calendar.git" target="_blank">\
+        JavaScript Calendar</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/FridgePlotter.git" target="_blank">\
+        Condensation Fridge Moniter</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Physics.git" target="_blank">\
+        3D Physics Engine</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Physics2D.git" target="_blank">\
+        2D Physics Engine</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Graphics.git" target="_blank">\
+        3D Graphics Engine</a></div>\
+        <div class="project_desc">desc (also talk about chess)</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/PacMan.git" target="_blank">\
+        Pacman</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
     </div>');
 }
 
