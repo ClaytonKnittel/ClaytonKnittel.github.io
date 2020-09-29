@@ -8,6 +8,8 @@ var field = -1;
 
 
 function gen_about() {
+    let $p = $('<div></div>');
+
     let $c = $('<div class="par"></div>');
     let $text = $('<div>Hi, my name is Clayton! I\'m currently a research assistant in \
     Dr. Angelina Lee\'s Parallel Computing Technology Group, working to convert the distributed, NoSQL database \
@@ -45,7 +47,35 @@ function gen_about() {
     by my manager afterward and is currently still under development.</div>');
     $c.append($text);
 
-    return $c;
+    $d = $('<div><div class="section_header">My Favorite Things:</div>\
+    <ul class="skills_list">\
+        <li>C</li>\
+        <ul>\
+            <li>low-level programming</li>\
+            <li>dynamic memory allocators (I\'ve written a few)</li>\
+            <li>data structures</li>\
+            <li>performance optimization</li>\
+            <li>bit twiddling (I\'m anti-conditional branching)</li>\
+        </ul>\
+        <li>C++</li>\
+        <ul>\
+            <li>templates</li>\
+            <li>constexpr (this feature is amazing)</li>\
+            <li>class abstraction/inheritence/polymorphism</li>\
+        </ul>\
+        <li>Concurrency</li>\
+        <ul>\
+            <li>pthreads</li>\
+            <li>low-level synchronization techniques</li>\
+            <li>non-blocking data structures/algorithms</li>\
+            <li>Linux <a href="https://lwn.net/Articles/650333/" target="_blank">restartable sequences</a> (rseq)</li>\
+        </ul>\
+    </ul></div>');
+
+    $p.append($c);
+    $p.append($d);
+
+    return $p;
 }
 
 function gen_proj() {
