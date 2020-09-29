@@ -126,6 +126,32 @@ a:active {
 }
 
 
+.projects {
+    width: 100%;
+    display: table;
+    border-spacing: 4px;
+}
+
+.project_entry {
+    margin-bottom: 40px;
+    display: table-row;
+}
+
+.project_title {
+    display: table-cell;
+    width: 30%;
+}
+
+.project_desc {
+    width: 70%;
+    display: table-cell;
+}
+
+.project_desc > div {
+    margin-bottom: 15px;
+}
+
+
 .noselect {
     -webkit-touch-callout: none;
       -webkit-user-select: none;

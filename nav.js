@@ -79,13 +79,72 @@ function gen_about() {
 }
 
 function gen_proj() {
-    return $("<div></div>");
+    return $('<div class="projects">\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/NCMalloc.git" target="_blank">\
+        Dynamic Memory Allocator v. 3</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/DeepLearning.git" target="_blank">\
+        Go game engine and AI</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/prycey/Shufle.git" target="_blank">\
+        Shufle</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Proxy.git" target="_blank">\
+        HTTP/HTTPS Web Proxy</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Util.git" target="_blank">\
+        Utility Library</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Cindy.git" target="_blank">\
+        Cognitive Psychology Experiment</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Sudoku.git" target="_blank">\
+        Sudoku</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Tetris.git" target="_blank">\
+        Tetris</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/Server.git" target="_blank">\
+        High-performance HTTP server</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title">Dynamic Memory Allocater v. 2</div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title"><a href="https://github.com/ClaytonKnittel/CMath.git" target="_blank">\
+        GPU-accelerated parallel math lib</a></div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    <div class="project_entry"> \
+        <div class="project_title">Dynamic Memory Allocater v. 1</div>\
+        <div class="project_desc">desc</div>\
+    </div>\
+    </div>');
 }
 
 function gen_other() {
     // talk about counting castles/project euler
     // talk about guitar/music
-    return $("<div></div>");
+    return $('<div></div>');
 }
 
 const field_contents = [
@@ -100,10 +159,22 @@ function switch_field(new_field) {
     }
 
     field = new_field;
+    window.sessionStorage.setItem("tab_idx", new_field);
 
     $main = $("#main");
     $main.empty();
     $main.append(field_contents[new_field]);
+}
+
+function get_field() {
+    let tab_idx;
+    if (tab_idx = window.sessionStorage.getItem("tab_idx")) {
+        return tab_idx;
+    }
+    else {
+        tab_idx = ABOUT;
+        window.sessionStorage.setItem("tab_idx");
+    }
 }
 
 document.getElementById("about_button").addEventListener("click", () => {
@@ -116,4 +187,4 @@ document.getElementById("other_button").addEventListener("click", () => {
     switch_field(OTHER);
 });
 
-switch_field(ABOUT);
+switch_field(get_field());
