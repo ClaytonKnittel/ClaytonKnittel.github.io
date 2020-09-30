@@ -44,7 +44,10 @@ function gen_about() {
     in Java, and the components I worked in had 50+ files, each being multiple thousands of lines long. By the end of \
     my time working there, I had the force/torque visualization fully functional, being able to dynamically display \
     each force/torque in any arbitrary model as a vector with properly scaled magnitude. The project was taken up \
-    by my manager afterward and is currently still under development.</div>');
+    by my manager afterward and is currently still under development.</div> \
+    <div>I am hoping to find work in systems software, distributed systems, or high-performance computing. \
+    I also have an interest in physical modeling and real-time graphics and physics, and I love applying theoretical \
+    concepts to projects.</div>');
     $c.append($text);
 
     $d = $('<div><div class="section_header">My Favorite Things:</div>\
